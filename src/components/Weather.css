@@ -1,0 +1,139 @@
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .weather {
+    display: flex;
+    place-self: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-image: linear-gradient(45deg,#2f4680,#500ae4);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .search-bar input {
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 25px;
+    color: #626262;
+    background: #ebfffc;
+    cursor: text;
+  }
+  .search-bar img{
+    width: 50px;
+    padding: 15px;
+    border-radius: 50%;
+    background: #ebfffc;
+    cursor: pointer;
+  }
+  .clear{
+    width: 150px;
+    margin: 30px 0;
+  }
+  .temperature{
+    color:#fff;
+    font-size: 80px;
+    line-height: 1;
+  }
+  .city{
+    color: #fff;
+    font-size: 40px;
+  }
+  .weather-data{
+    width: 100%;
+    margin-top: 40px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  .weather-data .col{
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 22px;
+  }
+  .weather-data .col span{
+    display: block;
+    font-size: 16px;
+  }
+  .weather-data .col img{
+    width: 26px;
+    margin-top: 10px;
+  }
+  /* Clouds as Background */
+.cloud {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  background: white;
+  border-radius: 100px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0.8;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 100px;
+}
+
+.cloud::before {
+  width: 110px;
+  height: 60px;
+  top: -30px;
+  left: 30px;
+}
+
+.cloud::after {
+  width: 90px;
+  height: 50px;
+  top: -15px;
+  left: 80px;
+}
+
+/* Animations for background clouds */
+@keyframes moveClouds {
+  from {
+      left: -200px;
+  }
+  to {
+      left: 110%;
+  }
+}
+
+/* Different cloud positions for the background */
+.cloud1 {
+  top: 10%;
+  left: -150px;
+  animation: moveClouds 20s linear infinite;
+}
+
+.cloud2 {
+  top: 40%;
+  left: -200px;
+  animation: moveClouds 25s linear infinite;
+}
+
+.cloud3 {
+  top: 70%;
+  left: -250px;
+  animation: moveClouds 30s linear infinite;
+}
+
+
+  
